@@ -4,9 +4,9 @@ git:
   quiet: false
 
 before_install:
-  -gradle installWrapper
+  - gradle installWrapper
 
-job:
+jobs:
   include:
   - jdk: openjdk11
   os: linux
@@ -15,7 +15,7 @@ job:
   allow_failures:
   - os: osx
 
-Notifications:
+notifications:
 email:
 recipients:
 - sophieheinz@magenta.de
