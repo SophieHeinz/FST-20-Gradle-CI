@@ -1,5 +1,7 @@
 language: java
 
+- brew install gradle
+
 git: 
   quiet: false
 
