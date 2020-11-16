@@ -40,14 +40,7 @@ jobs:
       - name: Grant execution permission
         run: chmod +x gradlew
       
-      #Cache für Gradle verwenden
-      - name: Cache Gradle package
-        uses: actions/cache@v1
-          with:
-            path:~/.gradle/caches
-            key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
-            restore-keys: ${{ runner.os }}-gradle
-            
+      
       #Gradle build starten
       - name: Build
         run: ./gradlew build
