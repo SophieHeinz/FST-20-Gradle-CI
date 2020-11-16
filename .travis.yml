@@ -7,6 +7,8 @@ before_install:
   - gradle installWrapper
 
 jobs:
+  allow_failures:
+  - os: osx
   include:
   - jdk: openjdk11
     os: linux
